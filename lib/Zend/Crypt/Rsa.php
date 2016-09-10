@@ -42,7 +42,7 @@ class Zend_Crypt_Rsa
     const BINARY = 'binary';
     const BASE64 = 'base64';
 
-    protected $_privateKey;
+   // protected $_privateKey;
 
     protected $_publicKey;
 
