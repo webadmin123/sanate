@@ -1,0 +1,27 @@
+<style>
+#result{
+    width: 282px;
+    overflow-wrap: break-word;
+    margin: 6px;
+    padding: 8px;
+}
+</style>
+<div id="result"></div>
+<script type="text/javascript">
+    //<![CDATA[
+    function check() {
+        new Ajax.Request('<?php echo $this->getAjaxCheckUrl() ?>', {
+            method:     'get',
+            onSuccess: function(transport){
+             if (transport.responseText){
+              
+				document.getElementById('result').innerHTML=JSON.parse(transport.responseText);
+            }
+            }
+        });
+    }
+    //]]>
+</script>
+
+<?php 	
+echo $this->getButtonHtml(); ?>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+    <name>Webarzoo_DC</name>
+    <version>1.0.0</version>
+    <stability>alpha</stability>
+    <license uri="https://opensource.org/licenses/OSL-3.0">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>A Product Delivery Checker extension helps  Customer to check product availability in its location by entering zip code of the location.</summary>
+    <description>A Product Delivery Checker extension allows Customer to check product availability in its location by entering zip code of the location. If product is not available then extension gives appropriate message.&#xD;
+&#xD;
+store owner also able to customize error and success message.&#xD;
+&#xD;
+this extension used zipcode api to get list of near by locaton's zipcode using store zipcode and range.&#xD;
+ </description>
+    <notes>fixed minor bugs</notes>
+    <authors><author><name>sonu singh</name><user>webarzoo</user><email>info@webarzoo.com</email></author></authors>
+    <date>2016-06-07</date>
+    <time>14:49:47</time>
+    <contents><target name="magelocal"><dir name="Webarzoo"><dir name="DC"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Form"><file name="Button.php" hash="71756907e0acbb555fe644933df09252"/></dir></dir></dir></dir><file name="DC.php" hash="0c5c24010dc7200bc3e4caa312ed91e9"/></dir><dir name="Helper"><file name="Data.php" hash="41f96c9557f44f522837627c2dd2cccb"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="DcController.php" hash="334187452f39c581b72accdae3e00751"/></dir><file name="IndexController.php" hash="a75332578043e9d3616e29e5487dcbe9"/></dir><dir name="etc"><file name="config.xml" hash="e9272b5ff6c414913628599de57fd7cf"/><file name="system.xml" hash="8678209fceb0aa3db73ba3d3ccf62030"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Webarzoo_DC.xml" hash="e399c86db390d324e11a42e655bb62bd"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="dc"><dir name="system"><dir name="config"><file name="button.phtml" hash="3d0309ecc55e483dfa6deddf7ea0770c"/></dir></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="dc.xml" hash="9b9cbcc14f4a9281c244c210ca8bfce5"/></dir><dir name="template"><dir name="dc"><file name="dc.phtml" hash="cfde25ed3d6571d158be323ae8304124"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="dc"><file name="style.css" hash="d1fdebec4020737988c609e29f89197c"/></dir></dir><dir name="js"><dir name="dc"><file name="jquery-2.1.4.min.js" hash="f9c7afd05729f10f55b689f36bb20172"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.2</min><max>6.0.0</max></php></required></dependencies>
+</package>

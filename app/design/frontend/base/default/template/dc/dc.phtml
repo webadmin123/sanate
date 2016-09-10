@@ -1,0 +1,40 @@
+<?php
+$helper=Mage::helper('dc');
+
+if($helper->getEnable()==1){
+?>
+
+<div class="block block-list block-check-delivery">
+    <div class="block-content" >
+		<p><strong><font color="red"><?php if(empty($helper->getdcTitle())){echo $this->__('Check product availability');} else {}echo $helper->getdcTitle(); ?></font></strong></p>	
+			<input style="width:167px;" name="zipcode" size="10" type="text" id="zipcode" maxlength="6" class="input-text" placeholder="<?php echo $this->__('Enter ZIP Code'); ?>"/>
+		     <div id="loading_checkDel" class="loading_checkDel" style="display:none;">
+		   
+		     </div>
+			 <input type="hidden" name="sku" id="sku" value="<?php echo Mage::registry('product')->getSku();?>"/>
+			<button  style="margin-left: 12px; float:none; width:67px; height: 35px; " type="button" name="zip-check" title="Check" class="button" id="zip-check" ><span><span><?php echo $this->__('Check'); ?></span></span></button>
+			<div id="delivery-message" style="float:right;"></div>
+			<?php $defaultHtml = Mage::getStoreConfig('dc/general/default_html'); ?>
+			<div id="delivery-html"><?php echo $defaultHtml ?></div>
+			
+		<br>		
+    </div>
+</div>
+<script>
+	$j = jQuery.noConflict();
+	Event.observe('zip-check', 'click', function(event){
+		 $j('.loading_checkDel').show();
+		 new Ajax.Request("<?php echo $this->getUrl('dc/index') ?>", {
+			method: "get",
+			parameters: {zipcode : $('zipcode').value,sku : $('sku').value },
+			onSuccess: function(transport) {
+				 $j('.loading_checkDel').hide();
+				 var json = transport.responseText.evalJSON();
+				 $('delivery-message').update(json.message);				 
+				 $('delivery-message').setStyle({color: json.color});
+				 $('delivery-html').update(json.html);	
+			}
+		});
+	});
+</script>
+<?php } ?>

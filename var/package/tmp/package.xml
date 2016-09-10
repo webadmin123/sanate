@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>webskills_shippingrestriction</name>
+    <version>0.1.2</version>
+    <stability>stable</stability>
+    <license>OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Shipping Restriction is a simple and lite magento extension.Using this extension,you can restrict your shipping deleivery by adding zipcodes. </summary>
+    <description>Shipping Restriction is a simple and lite magento extension.Using this extension,you can restrict your shipping deleivery by adding zipcodes. You can add,remove or edit zipcodes from backend. Also,there is an additional ajax based block you can place at any page using following code: {{block type="core/template" template="shippingrestriction/index.phtml"}} &#xD;
+You can also use frontend url yourmagentohost/shippingrestriction</description>
+    <notes>Shipping Restriction By Zip Code,first version 0.1.0 launched.</notes>
+    <authors><author><name>Rohit Dhiman</name><user>rohitjesus</user><email>rohitdoll@gmail.com</email></author></authors>
+    <date>2014-06-12</date>
+    <time>09:47:11</time>
+    <contents><target name="magelocal"><dir name="Webskills"><dir name="Shippingrestriction"><dir name="Block"><dir name="Adminhtml"><dir name="Shippingzip"><dir name="Edit"><file name="Form.php" hash="5d7df940af0140fb61afb91428f62f59"/><dir name="Tab"><file name="Form.php" hash="532ca5831630c7b7ad9832f8faa8cfb6"/></dir><file name="Tabs.php" hash="cd5fcf91406ac4ab4f2c77eea869f9d0"/></dir><file name="Edit.php" hash="39ea1017251a3e56340d4ac7cf91acda"/><file name="Grid.php" hash="27129599f3c5cc42308787d3bda95f2c"/></dir><file name="Shippingzip.php" hash="b5f0b932027b876f315e17ae6a9d8752"/></dir><file name="Index.php" hash="a2ec07eb5805838f1c5c615b21c05004"/><file name="Shippingzip.php" hash="5ce623899287dca1434d78dfab67fe78"/></dir><dir name="Helper"><file name="Data.php" hash="ecd9b30b91affedbcc8d3fc4ca76ed2e"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Shippingzip"><file name="Collection.php" hash="2ac4e031797d5fb603f68e9a1df8938d"/></dir><file name="Shippingzip.php" hash="159c5edef6fe90bf1918e7ef5539d313"/></dir><file name="Observer.php" hash="88c95f6b876e294464b7fa39541a61bd"/><file name="Observer.php~" hash="88c95f6b876e294464b7fa39541a61bd"/><file name="Shippingzip.php" hash="674116aa5d659b2ae0a45a008a0b4b97"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="ShippingzipController.php" hash="8c4846b6986f9d0a6b85bb16acd89b14"/></dir><file name="IndexController.php" hash="dd5389173c8c6370c3405ac15a069fdb"/><file name="IndexController.php~" hash="b7186ea045566b454677880a2a305b5e"/><file name="ShippingzipController.php" hash="25525a79b617bbb3f8e0f5c742d6f71f"/></dir><dir name="etc"><file name="config.xml" hash="8567987eb7fbf7d86804600aba5730dc"/></dir><dir name="sql"><dir name="shippingrestriction_setup"><file name="mysql4-install-0.1.0.php" hash="7c5750e9afdedbe37511c2632f2c7896"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Webskills_Shippingrestriction.xml" hash="ecdb562dc07d9d7c20cce6221a39868b"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="shippingrestriction.xml" hash="72896f42250ffb5c4b2e18c46393b4b5"/></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="shippingrestriction.xml" hash="d2ea2a540af46f17349d7c724dd79506"/></dir><dir name="template"><dir name="shippingrestriction"><file name="index.phtml" hash="7330a2a5fb4c5db1e3bfe0caa3ab3ad4"/><file name="shippingzip.phtml" hash="c1fce0c026e10a2d1e9a6f497a860e79"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

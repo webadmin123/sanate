@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Webarzoo_DC>
+      <version>0.1.0</version>
+    </Webarzoo_DC>
+  </modules>
+  <global>
+    <helpers>
+      <dc>
+        <class>Webarzoo_Dc_Helper</class>
+      </dc>
+    </helpers>
+	<blocks>
+	     <dc>
+             <class>Webarzoo_Dc_Block</class>
+        </dc>
+    </blocks>
+  </global>
+   <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <dc after="Mage_Adminhtml">Webarzoo_DC_Adminhtml</dc>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+  <adminhtml>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <dc>
+                                        <title>Product availability checker </title>
+                                    </dc>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</adminhtml>
+<frontend>
+       <routers>
+          <routeurfrontend>
+              <use>standard</use>
+              <args>
+                 <module>Webarzoo_DC</module>
+                 <frontName>dc</frontName>
+              </args>
+           </routeurfrontend>
+       </routers>
+	    <layout>
+            <updates>
+                <dc>
+                    <file>dc.xml</file>
+                </dc>
+            </updates>
+        </layout>
+    </frontend>
+	<default>
+		<dc>
+			<general>
+				<active>1</active>
+				<block_title>Check Delivery Availability</block_title>
+				<success_messgae>Delivery possible in your area</success_messgae>
+				<failure_messgae>We do not deliver to this location.</failure_messgae>
+				<empty_messgae>Please enter Zip Code</empty_messgae>
+			</general>
+		</dc>
+	</default>
+</config> 
