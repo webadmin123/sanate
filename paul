@@ -1,0 +1,9 @@
+When developing on a feature branch or a fork, your code can often get out of date. There are a number of reasons this might happen:
+
+You’re concentrating on a feature rather than syncing.
+You’re not yet ready to worry about integrating just yet.
+You’re returning to a stale branch or fork to pick up where you left off.
+Have you ever wished there was a simple way to update your feature branches and forks with the most recent commits from mainline? Bitbucket now automates syncing your projects without ever needing to go to the command line.
+
+Managing feature branches
+We recently added the feature branches tab to the commits page, allowing you to see what branches are ahead of your main branch. From the feature branches tab, you can now keep these feature branches in sync with your main branch with one click.
